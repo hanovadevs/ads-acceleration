@@ -34,26 +34,18 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3 border-b border-slate-200' : 'bg-transparent py-4'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-2.5 border-b border-slate-200' : 'bg-transparent py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo with official image */}
-          <Link to="/" className="flex items-center gap-3 group">
+          {/* Bigger Logo Only - No redundant text */}
+          <Link to="/" className="flex items-center group py-1">
             <img 
               src="/images/logo.png" 
               alt="GrowTech Advertising Logo" 
-              className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:scale-103 transition-transform"
             />
-            <div className="hidden sm:flex flex-col border-l border-slate-300 pl-3">
-              <span className="font-extrabold text-base tracking-tight text-[#17253F] leading-tight">
-                GROWTECH
-              </span>
-              <span className="text-[10px] font-bold tracking-widest text-[#D99B26] uppercase">
-                ADVERTISING
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

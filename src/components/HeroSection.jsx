@@ -30,47 +30,41 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden border-b border-slate-200/80">
+    <section className="relative pt-36 sm:pt-44 pb-20 sm:pb-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden border-b border-slate-200/80">
       
       {/* Background Soft Lighting Radial Gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-[#D99B26]/10 via-[#17253F]/5 to-transparent blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Floating Badge */}
+        {/* Clean Top Floating Pill Badge */}
         <FadeInWhenVisible className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-xs hover:border-[#D99B26]/50 transition-all cursor-default">
-            <img 
-              src="/images/logo.png" 
-              alt="GrowTech Advertising Logo" 
-              className="h-6 w-auto object-contain"
-            />
-            <div className="h-3.5 w-px bg-slate-300" />
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-xs hover:border-[#D99B26]/50 transition-all cursor-default">
+            <span className="w-2 h-2 rounded-full bg-[#D99B26] animate-pulse" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#17253F]">
               GROWTECH ADVERTISING • MAKING YOUR BRAND FLY
             </span>
           </div>
         </FadeInWhenVisible>
 
-        {/* Main Headline */}
+        {/* Main Headline - No overlap */}
         <FadeInWhenVisible delay={0.1} className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#17253F] tracking-tight leading-[1.08]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#17253F] tracking-tight leading-[1.12]">
             We Don't Just Manage Ads. <br />
             We Accelerate Your{' '}
-            <span className="inline-block relative min-w-[280px] sm:min-w-[420px] text-left">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D99B26] via-amber-500 to-yellow-600 font-black">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={DYNAMIC_WORDS[index]}
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.35, ease: 'easeOut' }}
-                  className="absolute left-0 text-transparent bg-clip-text bg-gradient-to-r from-[#D99B26] via-amber-500 to-yellow-600 font-black"
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.3 }}
+                  className="inline-block"
                 >
                   {DYNAMIC_WORDS[index]}.
                 </motion.span>
               </AnimatePresence>
-              <span className="opacity-0">{DYNAMIC_WORDS[0]}.</span>
             </span>
           </h1>
 
