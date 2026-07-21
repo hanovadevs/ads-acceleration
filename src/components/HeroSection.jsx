@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import { FadeInWhenVisible } from './AnimatedSection';
 
 function LinkedInIcon(props) {
@@ -30,24 +30,24 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative pt-36 sm:pt-44 pb-20 sm:pb-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden border-b border-slate-200/80">
+    <section className="relative pt-36 sm:pt-44 pb-24 sm:pb-32 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden border-b border-slate-200/80">
       
       {/* Background Soft Lighting Radial Gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-[#D99B26]/10 via-[#17253F]/5 to-transparent blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-[#D99B26]/12 via-[#17253F]/5 to-transparent blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Clean Top Floating Pill Badge */}
+        {/* Top Floating Pill Badge */}
         <FadeInWhenVisible className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-xs hover:border-[#D99B26]/50 transition-all cursor-default">
-            <span className="w-2 h-2 rounded-full bg-[#D99B26] animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#D99B26] animate-pulse" />
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#17253F]">
               GROWTECH ADVERTISING • MAKING YOUR BRAND FLY
             </span>
           </div>
         </FadeInWhenVisible>
 
-        {/* Main Headline - No overlap */}
+        {/* Main Headline */}
         <FadeInWhenVisible delay={0.1} className="text-center max-w-4xl mx-auto space-y-6">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#17253F] tracking-tight leading-[1.12]">
             We Don't Just Manage Ads. <br />
@@ -98,67 +98,127 @@ export default function HeroSection() {
           </motion.div>
         </FadeInWhenVisible>
 
-        {/* Founder Portrait & Metric Preview */}
-        <FadeInWhenVisible delay={0.3} className="mt-16 max-w-5xl mx-auto">
-          <div className="bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-2xl relative overflow-hidden group">
+        {/* ULTRA-STYLISH SHOWCASE FRAME */}
+        <FadeInWhenVisible delay={0.3} className="mt-16 max-w-6xl mx-auto">
+          <div className="bg-white/95 backdrop-blur-xl rounded-[36px] p-6 sm:p-10 border border-slate-200 shadow-2xl shadow-slate-900/10 relative overflow-hidden group">
             
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            {/* Top Showcase Status Header */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-6 border-b border-slate-100">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#17253F]">
+                  VERIFIED CLIENT REVENUE DASHBOARD
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 text-[#D99B26] border border-amber-200/80 text-xs font-bold shadow-xs">
+                <TrendingUp className="w-4 h-4" />
+                <span>+101% YoY Revenue Growth</span>
+              </div>
+            </div>
+
+            {/* Split Visual Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-8">
               
-              {/* Founder Image Frame */}
-              <div className="md:col-span-5 relative rounded-2xl overflow-hidden bg-[#17253F] aspect-4/3 sm:aspect-square flex items-center justify-center">
+              {/* Left Column: Founder Presentation Card */}
+              <div className="lg:col-span-5 relative rounded-3xl overflow-hidden bg-[#17253F] shadow-xl border border-slate-800 flex flex-col justify-end min-h-[360px] group/img">
                 <img 
                   src="/images/affan_mughal.png" 
                   alt="Affan Mughal - Founder of GrowTech Advertising" 
-                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-700"
                 />
                 
-                {/* Verified Founder Badge */}
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#17253F]/90 backdrop-blur-md border border-slate-700/80 text-white flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#D99B26] text-slate-950 flex items-center justify-center font-bold text-xs shrink-0">
-                    AM
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-white">Affan Mughal</div>
-                    <div className="text-[10px] text-[#D99B26] font-semibold">Founder & Lead PPC Strategist</div>
+                {/* Gradient Shadow Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#17253F] via-[#17253F]/40 to-transparent pointer-events-none" />
+
+                {/* Floating Founder Badge */}
+                <div className="relative z-10 p-5 m-4 rounded-2xl bg-[#17253F]/90 backdrop-blur-md border border-slate-700/90 shadow-lg text-white flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#D99B26] text-slate-950 flex items-center justify-center font-extrabold text-sm shadow-md shrink-0">
+                      AM
+                    </div>
+                    <div>
+                      <div className="text-sm font-extrabold text-white flex items-center gap-1.5">
+                        <span>Affan Mughal</span>
+                        <ShieldCheck className="w-4 h-4 text-[#D99B26]" />
+                      </div>
+                      <div className="text-xs text-[#D99B26] font-bold">
+                        Founder & Lead PPC Strategist
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Dashboard Result Preview Frame */}
-              <div className="md:col-span-7 space-y-4 p-2 sm:p-4">
+              {/* Right Column: Mac-Style Dashboard Frame */}
+              <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                    VERIFIED CLIENT REVENUE DASHBOARD
-                  </span>
-                  <span className="px-2.5 py-1 rounded-full bg-amber-50 text-[#D99B26] text-xs font-bold border border-amber-200/80 flex items-center gap-1">
-                    <TrendingUp className="w-3.5 h-3.5" /> +101% YoY Growth
-                  </span>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 shadow-inner">
-                  <img 
-                    src="/images/dashboard_mockup.png" 
-                    alt="GrowTech Advertising Amazon PPC Dashboard" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-
-                <div className="grid grid-cols-3 gap-3 text-center pt-2">
-                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase">Quarterly Sales</div>
-                    <div className="text-sm sm:text-base font-extrabold text-[#17253F]">$748,193</div>
+                <div className="rounded-2xl border border-slate-200/90 overflow-hidden bg-slate-900 shadow-xl">
+                  {/* Mac Browser Header Bar */}
+                  <div className="bg-slate-900 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-rose-500/80" />
+                      <span className="w-3 h-3 rounded-full bg-amber-500/80" />
+                      <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                    </div>
+                    <div className="px-4 py-1 rounded-lg bg-slate-800 text-[10px] font-mono text-slate-400 border border-slate-700">
+                      analytics.growtechadvertising.com/verified-dashboard
+                    </div>
+                    <div className="text-[10px] font-bold text-emerald-400">
+                      LIVE DATA
+                    </div>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase">Peak Net Margin</div>
-                    <div className="text-sm sm:text-base font-extrabold text-emerald-600">16.0%</div>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase">Target tACOS</div>
-                    <div className="text-sm sm:text-base font-extrabold text-[#D99B26]">12.6%</div>
+
+                  {/* Dashboard Image */}
+                  <div className="relative overflow-hidden bg-slate-950">
+                    <img 
+                      src="/images/dashboard_mockup.png" 
+                      alt="GrowTech Advertising Amazon PPC Dashboard" 
+                      className="w-full h-auto object-cover"
+                    />
                   </div>
                 </div>
 
+              </div>
+
+            </div>
+
+            {/* Bottom 3 High-Impact KPI Scorecards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+              
+              <div className="bg-slate-50/90 p-5 rounded-2xl border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all">
+                <div className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-1">
+                  Quarterly Ad Revenue
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-[#17253F]">
+                  $748,193
+                </div>
+                <div className="text-xs font-bold text-emerald-600 mt-1 flex items-center justify-center gap-1">
+                  <TrendingUp className="w-3.5 h-3.5" /> +101% YoY Increase
+                </div>
+              </div>
+
+              <div className="bg-slate-50/90 p-5 rounded-2xl border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all">
+                <div className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-1">
+                  Peak Net Profit Margin
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-emerald-600">
+                  16.0%
+                </div>
+                <div className="text-xs font-bold text-slate-600 mt-1">
+                  Scaled from 10% Initial Base
+                </div>
+              </div>
+
+              <div className="bg-slate-50/90 p-5 rounded-2xl border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all">
+                <div className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-1">
+                  Target tACOS Efficiency
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-[#D99B26]">
+                  12.6%
+                </div>
+                <div className="text-xs font-bold text-slate-600 mt-1">
+                  Optimized Category Benchmark
+                </div>
               </div>
 
             </div>
