@@ -1,17 +1,18 @@
-# Ads Acceleration by Affan Mughal
+# GrowTech Advertising — Making Your Brand Fly
 
-A high-performance, data-driven Amazon PPC agency web application built for **Affan Mughal** (Founder & Lead Amazon PPC Strategist).
+A high-performance, data-driven Amazon PPC agency web application built for **GrowTech Advertising** and founder **Affan Mughal** (Lead Amazon PPC Strategist).
 
 ## 🚀 Features
 
-- **Luxury Color Palette**: Sleek Obsidian Black, Slate Charcoal, and Light Theme backgrounds with emerald status accents.
-- **Dynamic & Interactive UI**: Framer Motion scroll reveals, dynamic cycling headlines, tab switchers, and staggered grid reveals.
-- **16 Free Browser-Based Amazon PPC Tools**: N-Gram Analyzer, SQP Intelligence Dashboard, Keyword Cannibalization Analyzer, Keepa ASIN Comparator, PPC Health Checker, and more.
+- **Official Brand Logo & Slogan**: Features the official GrowTech Advertising logo (`Logo.jpg` / `Logo.png`) and tagline *"Making Your Brand Fly"*.
+- **Deep Navy & Metallic Gold Color Palette**: Premium Sapphire Navy (`#17253F`) and Metallic Gold (`#D99B26`) palette.
+- **Dynamic 2.2-Second Intro Page Revealer**: High-end preloader screen with animated progress meter and curtain slide exit.
+- **16 Free Browser-Based Amazon PPC Tools**: Bulksheet Optimizer, PPC Health Checker, SQP Intelligence Dashboard, N-Gram Analyzer, Keyword Cannibalization, Keepa ASIN Comparator, and more.
 - **Full Agency Pages**:
   - Home Page (`/`)
   - Free Tools Directory (`/tools`)
   - Free vs Paid Software Alternatives (`/tools/free-amazon-ppc-tools`)
-  - About Affan Mughal (`/about`)
+  - About Affan Mughal & GrowTech (`/about`)
   - Verified Case Studies (`/case-studies`)
   - Wall of Love & Client Reviews (`/success-stories`)
   - Retainer Pricing (`/agency-pricing`)
@@ -21,7 +22,7 @@ A high-performance, data-driven Amazon PPC agency web application built for **Af
 ## 🛠️ Tech Stack
 
 - **Framework**: React 18 + Vite
-- **Styling**: Tailwind CSS v4 + Custom Glassmorphism & Animations
+- **Styling**: Tailwind CSS v4 + Custom Glassmorphism & GrowTech Gold Aesthetics
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Routing**: React Router DOM
@@ -47,4 +48,4 @@ npm run build
 
 ## 📜 License
 
-Created for Affan Mughal - Ads Acceleration.
+Created for Affan Mughal — GrowTech Advertising.

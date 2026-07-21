@@ -16,7 +16,7 @@ export default function AboutPage() {
             The Amazon PPC agency that engineers profit, not just clicks.
           </h1>
           <p className="mt-4 text-lg text-slate-600 font-normal leading-relaxed">
-            Ads Acceleration is an Amazon PPC management agency for brand owners who are done with agencies that chase volume. We manage Sponsored Products, Sponsored Brands, and Sponsored Display toward one goal: sustainable profit — a 10–15% TACoS, protected margins, and organic rank that compounds long after the ad spend.
+            GrowTech Advertising is an Amazon PPC management agency for brand owners who are done with agencies that chase volume. We manage Sponsored Products, Sponsored Brands, and Sponsored Display toward one goal: sustainable profit — a 10–15% TACoS, protected margins, and organic rank that compounds long after the ad spend.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   The approach is honest about the early stage: when an account is being rebuilt for profit, margins may dip slightly at first during initial clean-ups. But once organic rankings stabilize, the system compounds — driving steady quarterly revenue growth and sustained, long-term profitability. It's an Amazon PPC consultant's rigor delivered with the commitment of an in-house team.
                 </p>
                 <p>
-                  That same system now powers Ads Acceleration's free tool suite — including a self-auditing PPC tool that lets sellers instantly identify and fix gaps in their ad structure. Founded to give serious Amazon brands the profit-first advertising partner most of them have never had.
+                  That same system now powers GrowTech Advertising's free tool suite — including a self-auditing PPC tool that lets sellers instantly identify and fix gaps in their ad structure. Founded to give serious Amazon brands the profit-first advertising partner most of them have never had.
                 </p>
               </div>
 

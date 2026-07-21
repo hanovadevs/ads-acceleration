@@ -21,7 +21,7 @@ const TESTIMONIALS = [
   {
     author: 'Marcus Vance',
     role: 'MDS Member & Apparel Seller',
-    quote: 'We crossed $1M monthly revenue with an 11.74% TACoS. Other agencies kept claiming it was impossible in apparel due to high CPCs. Ads Acceleration proved them wrong.',
+    quote: 'We crossed $1M monthly revenue with an 11.74% TACoS. Other agencies kept claiming it was impossible in apparel due to high CPCs. GrowTech Advertising proved them wrong.',
     metrics: '$1.06M Monthly Rev',
     channel: 'Verified Feedback',
   },
@@ -42,7 +42,7 @@ const TESTIMONIALS = [
   {
     author: 'Julian Thorne',
     role: 'Managing Director, Aura Beauty',
-    quote: 'The transition from standard percentage-of-spend agencies to Ads Acceleration fixed-retainer model was the best business decision we made this year.',
+    quote: 'The transition from standard percentage-of-spend agencies to GrowTech Advertising\'s fixed-retainer model was the best business decision we made this year.',
     metrics: '+101% YoY Growth',
     channel: 'Verified Review',
   },

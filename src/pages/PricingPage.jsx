@@ -52,7 +52,7 @@ const TIERS = [
 const PRICING_FAQS = [
   {
     q: 'How is agency pricing structured?',
-    a: 'Ads Acceleration uses a fixed monthly retainer model tied to your ad spend tier. Pricing scales with the complexity and volume of your account — not a flat fee regardless of size. All plans require a minimum 3-month commitment to allow the TACoS reduction strategy to show measurable results.',
+    a: 'GrowTech Advertising uses a fixed monthly retainer model tied to your ad spend tier. Pricing scales with the complexity and volume of your account — not a flat fee regardless of size. All plans require a minimum 3-month commitment to allow the TACoS reduction strategy to show measurable results.',
   },
   {
     q: 'Do you charge a percentage of ad spend?',

@@ -154,7 +154,7 @@ export default function ReportingPage() {
               </div>
 
               <div className="pt-6 border-t border-slate-100 mt-8 flex items-center justify-between text-xs text-slate-400">
-                <span>Standard Ads Acceleration Deliverable</span>
+                <span>Standard GrowTech Advertising Deliverable</span>
                 <span className="font-bold text-slate-900">Updated Every 14 Days</span>
               </div>
             </div>

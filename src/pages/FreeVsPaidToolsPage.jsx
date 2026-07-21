@@ -83,7 +83,7 @@ export default function FreeVsPaidToolsPage() {
             <h2 className="font-extrabold text-lg">PPC Task / Job To Be Done</h2>
             <div className="hidden sm:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-400">
               <span>Typical Paid Software</span>
-              <span className="text-emerald-400">Ads Acceleration Free Tool</span>
+              <span className="text-[#D99B26] font-bold">GrowTech Advertising Free Tool</span>
             </div>
           </div>
 
