@@ -100,7 +100,7 @@ export default function HeroSection() {
 
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/affanmughal?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                   target="_blank" 
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold text-slate-800 bg-white hover:bg-slate-100 border border-slate-300 transition-colors shadow-sm"
