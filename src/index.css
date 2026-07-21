@@ -33,6 +33,13 @@
   background-size: 20px 20px;
 }
 
+/* Theme-Matched Dual Dot Pattern (Navy + Gold) */
+.bg-dot-pattern-theme {
+  background-image: radial-gradient(rgba(23, 37, 63, 0.14) 1.5px, transparent 1.5px), radial-gradient(rgba(217, 155, 38, 0.18) 1.5px, transparent 1.5px);
+  background-size: 28px 28px, 56px 56px;
+  background-position: 0 0, 14px 14px;
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
