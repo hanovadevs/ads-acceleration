@@ -1,57 +1,69 @@
 import React from 'react';
-import { Target, PieChart, ShieldCheck, Compass, BarChart3, Lock } from 'lucide-react';
+import { Target, PieChart, ShieldCheck, Compass, BarChart3, Lock, ChevronRight } from 'lucide-react';
 import { FadeInWhenVisible, StaggerContainer, StaggerItem } from './AnimatedSection';
 
 const SOLUTIONS = [
   {
     num: '01',
-    title: 'We track true margin, not just ACOS',
+    titleMain: 'Tracking True Margin,',
+    titleSub: 'Not Just Vanity ACOS',
     desc: 'We identify exactly where spend is hurting profit and tell you when to scale or hold back based on real net margin.',
     icon: PieChart,
+    tag: 'NET MARGIN FOCUS',
   },
   {
     num: '02',
-    title: 'Every campaign is built to lift organic rank',
+    titleMain: 'Campaign Architecture',
+    titleSub: 'Built for Organic Rank',
     desc: 'We structure bids and placement targets specifically to boost organic positions and lower long-term TACoS dependency.',
     icon: Target,
+    tag: 'ORGANIC RANK SYNERGY',
   },
   {
     num: '03',
-    title: 'We start with a full business audit',
+    titleMain: 'Deep Business Audit',
+    titleSub: 'Before Any Changes',
     desc: 'Backend profit margins, competitor dynamics, search volume gaps — mapped out before we touch a single live campaign.',
     icon: ShieldCheck,
+    tag: 'FULL ACCOUNT AUDIT',
   },
   {
     num: '04',
-    title: 'You get a strategy, not a spreadsheet',
+    titleMain: 'Action Plan Strategy,',
+    titleSub: 'Not Just Spreadsheets',
     desc: 'A custom bi-weekly action plan built around your specific product margins, unit economics, and quarterly targets.',
     icon: Compass,
+    tag: 'BI-WEEKLY ROADMAP',
   },
   {
     num: '05',
-    title: 'We scale spend only when numbers justify it',
+    titleMain: 'Scaling Spend Only',
+    titleSub: 'When Data Justifies',
     desc: 'Every budget increase is directly tied to validated net profit margin data, never arbitrary guesswork.',
     icon: BarChart3,
+    tag: 'DATA-BACKED SCALING',
   },
   {
     num: '06',
-    title: 'We build keyword dominance for your category',
+    titleMain: 'Keyword Dominance',
+    titleSub: 'For Your Category',
     desc: 'Targeting and bidding architecture engineered specifically to systematically take and protect top-of-search positions.',
     icon: Lock,
+    tag: 'TOP OF SEARCH CONTROL',
   },
 ];
 
 export default function EngineeringProfit() {
   return (
-    <section className="py-24 bg-white border-b border-slate-200 relative">
+    <section className="py-24 bg-white border-b border-slate-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <FadeInWhenVisible className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-widest mb-4">
+        <FadeInWhenVisible className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
             HOW WE FIX IT
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Stop Managing Ads. Start Engineering Profit.
           </h2>
           <p className="mt-4 text-lg text-slate-600 font-normal leading-relaxed">
@@ -59,34 +71,55 @@ export default function EngineeringProfit() {
           </p>
         </FadeInWhenVisible>
 
-        {/* Staggered Cards */}
+        {/* 6 Dark Obsidian Ultra-Stylish Cards */}
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SOLUTIONS.map((item, idx) => {
             const Icon = item.icon;
             return (
               <StaggerItem key={idx}>
-                <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl hover:border-slate-600 transition-all duration-300 group flex flex-col justify-between h-full">
+                <div className="bg-slate-950 text-white rounded-[32px] p-8 border border-slate-800 shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between h-full group">
+                  
                   <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="font-mono text-sm font-extrabold text-slate-500 group-hover:text-emerald-400 transition-colors">
-                        {item.num}
-                      </span>
-                      <div className="w-10 h-10 rounded-2xl bg-slate-800 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+                    {/* Top Badges Row */}
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-14 h-10 rounded-2xl bg-slate-900 shadow-inner border border-slate-800 flex items-center justify-center">
+                        <span className="font-extrabold text-base tracking-tight text-emerald-400">
+                          {item.num}
+                        </span>
+                      </div>
+
+                      <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-400 group-hover:text-slate-950 transition-colors">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 leading-snug">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+
+                    {/* Title with Vertical Line */}
+                    <div className="flex items-start mb-4">
+                      <div className="w-1 h-12 rounded-full bg-emerald-400 mr-3.5 shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-xl font-extrabold text-white tracking-tight leading-snug">
+                          {item.titleMain}
+                        </h3>
+                        <div className="text-base font-bold text-slate-400 tracking-tight mt-0.5">
+                          {item.titleSub}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                    <span className="font-semibold uppercase tracking-wider text-slate-400">Ads Acceleration System</span>
-                    <span className="text-emerald-400 font-bold">Proven Protocol</span>
+                  {/* Bottom Tag Pill */}
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
+                    <span className="text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full bg-slate-900 text-emerald-400 border border-slate-800">
+                      {item.tag}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
                   </div>
+
                 </div>
               </StaggerItem>
             );
