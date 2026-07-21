@@ -40,11 +40,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           
           {/* Bigger Logo Only - No redundant text */}
-          <Link to="/" className="flex items-center group py-1">
+          <Link to="/" className="flex items-center group py-0.5">
             <img 
               src="/images/logo.png" 
               alt="GrowTech Advertising Logo" 
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:scale-103 transition-transform"
+              className="h-16 sm:h-20 md:h-24 max-h-24 w-auto object-contain group-hover:scale-103 transition-transform"
             />
           </Link>
 

@@ -18,20 +18,12 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="inline-block">
               <img 
                 src="/images/logo.png" 
                 alt="GrowTech Advertising Logo" 
-                className="h-12 w-auto object-contain bg-white/90 p-1.5 rounded-xl shadow-md"
+                className="h-16 sm:h-20 w-auto object-contain bg-white/95 p-2 rounded-2xl shadow-lg"
               />
-              <div className="flex flex-col">
-                <span className="font-extrabold text-xl tracking-tight text-white leading-tight">
-                  GROWTECH
-                </span>
-                <span className="text-xs font-bold tracking-widest text-[#D99B26] uppercase">
-                  ADVERTISING
-                </span>
-              </div>
             </Link>
 
             <p className="text-slate-300 text-sm max-w-sm font-normal leading-relaxed">
