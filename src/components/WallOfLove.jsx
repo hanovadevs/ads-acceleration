@@ -50,50 +50,50 @@ const TESTIMONIALS = [
 
 export default function WallOfLove() {
   return (
-    <section id="testimonials" className="py-24 bg-slate-100/70 border-b border-slate-200">
+    <section id="testimonials" className="py-16 sm:py-20 bg-slate-100/70 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <FadeInWhenVisible className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-widest mb-4">
+        <FadeInWhenVisible className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#17253F] text-white text-[11px] font-bold uppercase tracking-widest mb-3 shadow-xs">
             WALL OF LOVE
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#17253F] tracking-tight leading-tight">
             Real Results from Real Sellers.
           </h2>
-          <p className="mt-4 text-lg text-slate-600 font-normal">
+          <p className="mt-3 text-base text-slate-600 font-normal">
             Don't just take our word for it. Discover how our strategies have transformed Amazon businesses into market leaders with unmatched profitability.
           </p>
         </FadeInWhenVisible>
 
         {/* Testimonial Cards Grid */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {TESTIMONIALS.map((t, idx) => (
             <StaggerItem key={idx}>
-              <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between h-full">
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1 text-amber-400">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex gap-1 text-[#D99B26]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-[#D99B26]" />
                       ))}
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-slate-100 text-slate-700">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-700">
                       {t.channel}
                     </span>
                   </div>
 
-                  <p className="text-slate-700 text-sm leading-relaxed mb-6 font-normal italic">
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed mb-5 font-normal italic">
                     "{t.quote}"
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                   <div>
-                    <div className="font-extrabold text-sm text-slate-900">{t.author}</div>
-                    <div className="text-xs text-slate-500">{t.role}</div>
+                    <div className="font-extrabold text-xs text-[#17253F]">{t.author}</div>
+                    <div className="text-[11px] text-slate-500">{t.role}</div>
                   </div>
-                  <div className="text-xs font-black text-slate-900 bg-slate-100 px-2.5 py-1.5 rounded-lg border border-slate-200">
+                  <div className="text-[11px] font-black text-[#17253F] bg-amber-50 text-[#D99B26] px-2.5 py-1 rounded-md border border-amber-200/80">
                     {t.metrics}
                   </div>
                 </div>
@@ -106,9 +106,9 @@ export default function WallOfLove() {
         <FadeInWhenVisible className="text-center">
           <Link
             to="/success-stories"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-bold text-white bg-slate-900 hover:bg-slate-800 transition-all shadow-md"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold text-white bg-[#17253F] hover:bg-[#D99B26] hover:text-slate-950 transition-all shadow-md"
           >
-            <span>View All Success Stories & Raw Unedited Reviews</span>
+            <span>View All Success Stories & Reviews</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </FadeInWhenVisible>

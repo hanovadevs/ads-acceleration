@@ -67,85 +67,85 @@ export default function BlogCarousel() {
   };
 
   return (
-    <section className="py-24 bg-slate-50 border-b border-slate-200 overflow-hidden">
+    <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header with Navigation Controls */}
-        <FadeInWhenVisible className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <FadeInWhenVisible className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-5">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#17253F] text-white text-[11px] font-bold uppercase tracking-widest mb-3 shadow-xs">
               EXPERT INSIGHTS
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#17253F] tracking-tight">
               Industry News & Playbooks.
             </h2>
-            <p className="mt-3 text-lg text-slate-600 max-w-2xl font-normal">
+            <p className="mt-2 text-base text-slate-600 max-w-xl font-normal">
               Stay ahead of the curve with our latest deep-dives, playbooks, and strategies. Learn how the top 1% of Amazon sellers scale sustainably.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full bg-white border border-slate-300 text-slate-800 hover:bg-slate-900 hover:text-white transition-colors flex items-center justify-center shadow-xs cursor-pointer"
+              className="w-10 h-10 rounded-full bg-white border border-slate-300 text-slate-800 hover:bg-[#17253F] hover:text-white transition-colors flex items-center justify-center shadow-xs cursor-pointer"
               aria-label="Previous Slide"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4" />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-white border border-slate-300 text-slate-800 hover:bg-slate-900 hover:text-white transition-colors flex items-center justify-center shadow-xs cursor-pointer"
+              className="w-10 h-10 rounded-full bg-white border border-slate-300 text-slate-800 hover:bg-[#17253F] hover:text-white transition-colors flex items-center justify-center shadow-xs cursor-pointer"
               aria-label="Next Slide"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" />
             </motion.button>
           </div>
         </FadeInWhenVisible>
 
         {/* Carousel Window with Motion */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {POSTS.slice(startIndex, startIndex + 3).map((post, idx) => (
+            {POSTS.slice(startIndex, startIndex + 3).map((post) => (
               <motion.div
                 key={post.slug}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4 }}
-                whileHover={{ y: -6 }}
-                className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                transition={{ duration: 0.35 }}
+                whileHover={{ y: -4 }}
+                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 rounded-lg bg-slate-900 text-white text-xs font-bold uppercase tracking-wider">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="px-2.5 py-0.5 rounded bg-[#17253F] text-white text-[10px] font-bold uppercase tracking-wider">
                       {post.tag}
                     </span>
-                    <div className="flex items-center gap-3 text-xs text-slate-400 font-medium">
-                      <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />{post.date}</span>
-                      <span className="flex items-center gap-1"><Eye className="w-3.5 h-3.5" />{post.views}</span>
+                    <div className="flex items-center gap-2.5 text-[11px] text-slate-400 font-medium">
+                      <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
+                      <span className="flex items-center gap-1"><Eye className="w-3 h-3" />{post.views}</span>
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug hover:text-slate-700 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-[#17253F] mb-2 leading-snug hover:text-[#D99B26] transition-colors">
                     {post.title}
                   </h3>
 
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-5 font-normal">
                     {post.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100">
+                <div className="pt-3 border-t border-slate-100">
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 hover:text-slate-600 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#17253F] hover:text-[#D99B26] transition-colors"
                   >
                     <span>Read Article</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </motion.div>

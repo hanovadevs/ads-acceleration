@@ -55,69 +55,69 @@ const SOLUTIONS = [
 
 export default function EngineeringProfit() {
   return (
-    <section className="py-24 bg-white border-b border-slate-200 relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-white border-b border-slate-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <FadeInWhenVisible className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
+        <FadeInWhenVisible className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#17253F] text-white text-[11px] font-bold uppercase tracking-widest mb-3 shadow-xs">
             HOW WE FIX IT
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#17253F] tracking-tight leading-tight">
             Stop Managing Ads. Start Engineering Profit.
           </h2>
-          <p className="mt-4 text-lg text-slate-600 font-normal leading-relaxed">
-            Most Amazon advertising agencies focus on clicks. We focus on margin. By aligning campaign architecture with your real bottom-line data, this Amazon PPC agency turns ad spend into a growth asset, not a monthly expense.
+          <p className="mt-3 text-base text-slate-600 font-normal leading-relaxed">
+            Most Amazon advertising agencies focus on clicks. We focus on margin. By aligning campaign architecture with your real bottom-line data, GrowTech Advertising turns ad spend into a growth asset.
           </p>
         </FadeInWhenVisible>
 
-        {/* 6 Dark Obsidian Ultra-Stylish Cards */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 6 Dark Navy/Gold Ultra-Stylish Cards */}
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SOLUTIONS.map((item, idx) => {
             const Icon = item.icon;
             return (
               <StaggerItem key={idx}>
-                <div className="bg-slate-950 text-white rounded-[32px] p-8 border border-slate-800 shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="bg-[#17253F] text-white rounded-[24px] p-6 border border-slate-800 shadow-xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between h-full group">
                   
                   <div>
                     {/* Top Badges Row */}
-                    <div className="flex items-center justify-between mb-8">
-                      <div className="w-14 h-10 rounded-2xl bg-slate-900 shadow-inner border border-slate-800 flex items-center justify-center">
-                        <span className="font-extrabold text-base tracking-tight text-emerald-400">
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="w-12 h-8 rounded-xl bg-slate-900 shadow-inner border border-slate-800 flex items-center justify-center">
+                        <span className="font-extrabold text-sm tracking-tight text-[#D99B26]">
                           {item.num}
                         </span>
                       </div>
 
-                      <div className="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-400 group-hover:text-slate-950 transition-colors">
-                        <Icon className="w-5 h-5" />
+                      <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-[#D99B26] group-hover:bg-[#D99B26] group-hover:text-slate-950 transition-colors">
+                        <Icon className="w-4 h-4" />
                       </div>
                     </div>
 
                     {/* Title with Vertical Line */}
-                    <div className="flex items-start mb-4">
-                      <div className="w-1 h-12 rounded-full bg-emerald-400 mr-3.5 shrink-0 mt-1" />
+                    <div className="flex items-start mb-3">
+                      <div className="w-1 h-10 rounded-full bg-[#D99B26] mr-3 shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="text-xl font-extrabold text-white tracking-tight leading-snug">
+                        <h3 className="text-lg font-extrabold text-white tracking-tight leading-snug">
                           {item.titleMain}
                         </h3>
-                        <div className="text-base font-bold text-slate-400 tracking-tight mt-0.5">
+                        <div className="text-sm font-bold text-slate-400 tracking-tight mt-0.5">
                           {item.titleSub}
                         </div>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-slate-300 text-sm leading-relaxed mb-6 font-normal">
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5 font-normal">
                       {item.desc}
                     </p>
                   </div>
 
                   {/* Bottom Tag Pill */}
-                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
-                    <span className="text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full bg-slate-900 text-emerald-400 border border-slate-800">
+                  <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
+                    <span className="text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-slate-900 text-[#D99B26] border border-slate-800">
                       {item.tag}
                     </span>
-                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-all" />
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#D99B26] group-hover:translate-x-0.5 transition-all" />
                   </div>
 
                 </div>
