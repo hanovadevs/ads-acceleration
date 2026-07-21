@@ -30,19 +30,33 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden border-b border-slate-200/80">
+    <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 bg-gradient-to-b from-slate-50/90 via-white to-slate-50/90 overflow-hidden border-b border-slate-200/80">
       
-      {/* Theme-Matched Dotted Background Pattern */}
-      <div className="absolute inset-0 bg-dot-pattern-theme pointer-events-none -z-10" />
+      {/* 1. Theme Dotted Grid Background */}
+      <div className="absolute inset-0 bg-dot-pattern-theme opacity-60 pointer-events-none -z-10" />
 
-      {/* Background Soft Lighting Radial Gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-[#D99B26]/15 via-[#17253F]/8 to-transparent blur-[140px] pointer-events-none -z-10" />
+      {/* 2. Top-Left Decorative Semi-Circle Arc Rings */}
+      <div className="absolute top-0 left-0 w-80 h-80 -translate-x-1/3 -translate-y-1/3 pointer-events-none -z-10 opacity-40">
+        <svg viewBox="0 0 200 200" fill="none" className="w-full h-full text-[#17253F]">
+          <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+          <circle cx="100" cy="100" r="65" stroke="#D99B26" strokeWidth="1.5" />
+          <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
+        </svg>
+      </div>
+
+      {/* 3. Top-Right Decorative Ellipse Glow Ring */}
+      <div className="absolute top-10 right-0 w-96 h-96 translate-x-1/3 -translate-y-1/4 pointer-events-none -z-10">
+        <div className="w-full h-full rounded-full border border-[#D99B26]/30 bg-gradient-to-br from-[#D99B26]/10 via-[#17253F]/5 to-transparent blur-3xl" />
+      </div>
+
+      {/* 4. Ambient Center Lighting Glow */}
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-[#D99B26]/12 via-[#17253F]/6 to-transparent blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Clean Top Floating Pill Badge */}
+        {/* Top Floating Brand Badge */}
         <FadeInWhenVisible className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 shadow-sm hover:border-[#D99B26]/50 transition-all cursor-default">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-xs hover:border-[#D99B26]/50 transition-all cursor-default">
             <span className="w-2 h-2 rounded-full bg-[#D99B26] animate-pulse" />
             <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#17253F]">
               GROWTECH ADVERTISING • MAKING YOUR BRAND FLY
@@ -50,8 +64,8 @@ export default function HeroSection() {
           </div>
         </FadeInWhenVisible>
 
-        {/* Main Headline - Sleek Compact Scale */}
-        <FadeInWhenVisible delay={0.1} className="text-center max-w-3xl mx-auto space-y-5">
+        {/* Main Headline */}
+        <FadeInWhenVisible delay={0.1} className="text-center max-w-3xl mx-auto space-y-4">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#17253F] tracking-tight leading-[1.12]">
             We Don't Just Manage Ads. <br />
             We Accelerate Your{' '}
@@ -76,7 +90,7 @@ export default function HeroSection() {
           </p>
         </FadeInWhenVisible>
 
-        {/* CTA Buttons */}
+        {/* Action Buttons */}
         <FadeInWhenVisible delay={0.2} className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
@@ -101,12 +115,12 @@ export default function HeroSection() {
           </motion.div>
         </FadeInWhenVisible>
 
-        {/* ULTRA-STYLISH SHOWCASE FRAME - Tighter Compact Scale */}
+        {/* HERO SHOWCASE CARD */}
         <FadeInWhenVisible delay={0.3} className="mt-12 max-w-5xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-5 sm:p-8 border border-slate-200 shadow-xl shadow-slate-900/5 relative overflow-hidden group">
+          <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-5 sm:p-7 border border-slate-200 shadow-xl shadow-slate-900/5 relative overflow-hidden group">
             
-            {/* Top Showcase Status Header */}
-            <div className="flex flex-wrap items-center justify-between gap-3 pb-5 mb-5 border-b border-slate-100">
+            {/* Showcase Header Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#17253F]">
@@ -119,11 +133,11 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Split Visual Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-6">
+            {/* Split Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-5">
               
               {/* Left Column: Founder Presentation Card */}
-              <div className="lg:col-span-5 relative rounded-2xl overflow-hidden bg-[#17253F] shadow-lg border border-slate-800 flex flex-col justify-end min-h-[300px] group/img">
+              <div className="lg:col-span-5 relative rounded-2xl overflow-hidden bg-[#17253F] shadow-lg border border-slate-800 flex flex-col justify-end min-h-[290px] group/img">
                 <img 
                   src="/images/affan_mughal.png" 
                   alt="Affan Mughal - Founder of GrowTech Advertising" 
@@ -134,7 +148,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#17253F] via-[#17253F]/40 to-transparent pointer-events-none" />
 
                 {/* Floating Founder Badge */}
-                <div className="relative z-10 p-4 m-3 rounded-xl bg-[#17253F]/90 backdrop-blur-md border border-slate-700/90 shadow-md text-white flex items-center justify-between gap-3">
+                <div className="relative z-10 p-3.5 m-3 rounded-xl bg-[#17253F]/90 backdrop-blur-md border border-slate-700/90 shadow-md text-white flex items-center justify-between gap-3">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-[#D99B26] text-slate-950 flex items-center justify-center font-extrabold text-xs shadow-sm shrink-0">
                       AM
@@ -188,7 +202,7 @@ export default function HeroSection() {
             {/* Bottom 3 High-Impact KPI Scorecards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-slate-100">
               
-              <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-sm transition-all">
+              <div className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-xs transition-all">
                 <div className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-0.5">
                   Quarterly Ad Revenue
                 </div>
@@ -200,7 +214,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-sm transition-all">
+              <div className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-xs transition-all">
                 <div className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-0.5">
                   Peak Net Profit Margin
                 </div>
@@ -212,7 +226,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="bg-slate-50/90 p-4 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all">
+              <div className="bg-slate-50/90 p-3.5 rounded-xl border border-slate-200/80 text-center hover:bg-white hover:shadow-xs transition-all">
                 <div className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-0.5">
                   Target tACOS Efficiency
                 </div>
@@ -230,7 +244,7 @@ export default function HeroSection() {
         </FadeInWhenVisible>
 
         {/* Feature Checkpoints */}
-        <FadeInWhenVisible delay={0.4} className="mt-10 flex flex-wrap items-center justify-center gap-5 text-xs font-semibold text-slate-700">
+        <FadeInWhenVisible delay={0.4} className="mt-9 flex flex-wrap items-center justify-center gap-5 text-xs font-semibold text-slate-700">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#D99B26]" />
             100% Dedicated Account Strategist
